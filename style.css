@@ -1,3 +1,8 @@
+html { 
+    scroll-behavior: smooth; 
+    transition-timing-function: cubic-bezier(0,.04,.99,-0.17)
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -42,7 +47,9 @@ header {
     justify-content: center;
     font-size: 10vw;
 }
-
+.header_right a {
+    color: white;
+}
 .header_btn {
     cursor: pointer;
 }
@@ -115,4 +122,30 @@ footer {
     align-items: center;
     justify-content: center;
     color: white;
+}
+
+@media (max-width: 600px){
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header_left h1 {
+        font-size: 3.5em;
+    }
+    .bio {
+        font-size: 2.5em;
+        width: 90%;
+    }
+    .section_row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .section_item img {
+        height: 15vh;
+    }
 }
